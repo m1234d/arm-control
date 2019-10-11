@@ -10,6 +10,7 @@ class BluetoothManager (object):
         self.peripheral = None
         self.ready = False
         self.c = None
+        self.print_ready = True
 
     def did_discover_peripheral(self, p):
         if p.name:
@@ -58,13 +59,33 @@ print('Scanning for peripherals...')
 cb.scan_for_peripherals()
 
 def write_values(data):
-    if mngr.ready:
+    if mngr.ready and mngr.print_ready:
         print(data)
         mngr.peripheral.write_characteristic_value(mngr.c, data + '\n', False)
+        mngr.print_ready = False
+        ui.delay(set_ready, 0.1)
 
+        
+def set_ready(data):
+    mngr.print_ready = True
+    
+def waist_action(sender):
+    write_values("Waist:" + str(sender.value))
+    
 def shoulder_action(sender):
     write_values("Shoulder:" + str(sender.value))
     
+def elbow_action(sender):
+    write_values("Elbow:" + str(sender.value))
+    
+def roll_action(sender):
+    write_values("Roll:" + str(sender.value))
+
+def pitch_action(sender):
+    write_values("Pitch" + str(sender.value))
+
+def grab_action(sender):
+    write_values("Grab:" + str(sender.value))
 
 while (not mngr.ready):
 	pass
