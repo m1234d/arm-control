@@ -66,26 +66,26 @@ def write_values(data):
         ui.delay(set_ready, 0.1)
 
         
-def set_ready(data):
+def set_ready():
     mngr.print_ready = True
     
 def waist_action(sender):
-    write_values("Waist:" + str(sender.value))
+    write_values("Waist:" + str(int(sender.value*1000)))
     
 def shoulder_action(sender):
-    write_values("Shoulder:" + str(sender.value))
+    write_values("Shoulder:" + str(int(sender.value*1000)))
     
 def elbow_action(sender):
-    write_values("Elbow:" + str(sender.value))
+    write_values("Elbow:" + str(int(sender.value*1000)))
     
 def roll_action(sender):
-    write_values("Roll:" + str(sender.value))
+    write_values("Roll:" + str(int(sender.value*1000)))
 
 def pitch_action(sender):
-    write_values("Pitch" + str(sender.value))
+    write_values("Pitch:" + str(int(sender.value*1000)))
 
 def grab_action(sender):
-    write_values("Grab:" + str(sender.value))
+    write_values("Grab:" + str(int(sender.value*1000)))
 
 while (not mngr.ready):
 	pass

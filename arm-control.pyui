@@ -5,10 +5,10 @@
         "nodes" : [
 
         ],
-        "frame" : "{{25, 47}, {270, 34}}",
+        "frame" : "{{18, 23}, {270, 34}}",
         "class" : "Slider",
         "attributes" : {
-          "action" : "shoulder_action",
+          "action" : "waist_action",
           "flex" : "W",
           "continuous" : true,
           "frame" : "{{20, 103}, {200, 34}}",
@@ -17,17 +17,107 @@
           "value" : 0.5,
           "name" : "slider1"
         },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{18, 88}, {270, 34}}",
+        "class" : "Slider",
+        "attributes" : {
+          "action" : "shoulder_action",
+          "flex" : "W",
+          "continuous" : true,
+          "frame" : "{{55, 164}, {200, 34}}",
+          "uuid" : "13559B40-5A33-4DF9-ADB6-8401F6C62EA6",
+          "class" : "Slider",
+          "value" : 0.5,
+          "name" : "slider2"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{18, 148}, {270, 34}}",
+        "class" : "Slider",
+        "attributes" : {
+          "flex" : "W",
+          "continuous" : true,
+          "action" : "elbow_action",
+          "frame" : "{{55, 164}, {200, 34}}",
+          "uuid" : "39FABE35-E40C-430A-9017-B79BB4F09C7F",
+          "class" : "Slider",
+          "value" : 0.5,
+          "name" : "slider3"
+        },
         "selected" : true
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{18, 212}, {270, 34}}",
+        "class" : "Slider",
+        "attributes" : {
+          "action" : "roll_action",
+          "flex" : "W",
+          "continuous" : true,
+          "frame" : "{{55, 164}, {200, 34}}",
+          "uuid" : "70B9D3DE-C9DB-4EA7-9377-AE4123FE4415",
+          "class" : "Slider",
+          "value" : 0.5,
+          "name" : "slider4"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{18, 271}, {270, 34}}",
+        "class" : "Slider",
+        "attributes" : {
+          "action" : "pitch_action",
+          "flex" : "W",
+          "continuous" : true,
+          "frame" : "{{55, 164}, {200, 34}}",
+          "uuid" : "D07D7594-3841-4CE2-B22C-C9989C27794D",
+          "class" : "Slider",
+          "value" : 0.5,
+          "name" : "slider5"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{18, 322}, {270, 34}}",
+        "class" : "Slider",
+        "attributes" : {
+          "action" : "grab_action",
+          "flex" : "W",
+          "continuous" : true,
+          "frame" : "{{55, 164}, {200, 34}}",
+          "uuid" : "65DDF6E6-5326-4E7C-8DE7-2C08A4C4B0B4",
+          "class" : "Slider",
+          "value" : 0.5,
+          "name" : "slider6"
+        },
+        "selected" : false
       }
     ],
     "frame" : "{{0, 0}, {310, 362}}",
     "class" : "View",
     "attributes" : {
-      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
-      "enabled" : true,
       "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-      "name" : "",
+      "enabled" : true,
       "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "name" : "",
       "flex" : ""
     },
     "selected" : false
