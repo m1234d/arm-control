@@ -8,6 +8,7 @@ import struct
 class BluetoothManager (object):
     def __init__(self):
         self.peripheral = None
+        self.ready = False
 
     def did_discover_peripheral(self, p):
         if p.name:
@@ -41,7 +42,8 @@ class BluetoothManager (object):
         for c in s.characteristics:
             print(c.uuid)
             if c.uuid == 'FFE1':
-                self.peripheral.write_characteristic_value(c, 'test', False)
+                self.ready = True
+                
 
     def did_update_value(self, c, error):
         heart_rate = struct.unpack('<B', c.value[1])[0]
@@ -54,7 +56,12 @@ print('Scanning for peripherals...')
 cb.scan_for_peripherals()
 
 try:
-    while True: pass
+    while True: 
+        if mngr.ready:
+            self.peripheral.write_characteristic_value(c, 'test', False)
+            v = ui.load_view()
+        v.present('sheet')
+        pass
 except KeyboardInterrupt:
     cb.reset()
     
