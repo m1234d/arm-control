@@ -1,16 +1,35 @@
 [
-    {
-        "class": "View",
-        "attributes": {
-            "background_color": "RGBA(1.000000,1.000000,1.000000,1.000000)",
-            "tint_color": "RGBA(0.000000,0.478000,1.000000,1.000000)",
-            "enabled": true,
-            "border_color": "RGBA(0.000000,0.000000,0.000000,1.000000)",
-            "flex": ""
-        },
-        "frame": "{{0, 0}, {240, 240}}",
-        "nodes": [
+  {
+    "nodes" : [
+      {
+        "nodes" : [
 
-        ]
-    }
+        ],
+        "frame" : "{{25, 47}, {270, 34}}",
+        "class" : "Slider",
+        "attributes" : {
+          "action" : "shoulder_action",
+          "flex" : "W",
+          "continuous" : true,
+          "frame" : "{{20, 103}, {200, 34}}",
+          "uuid" : "0C5826E2-B784-42E0-8B90-228C5FDAFCE6",
+          "class" : "Slider",
+          "value" : 0.5,
+          "name" : "slider1"
+        },
+        "selected" : true
+      }
+    ],
+    "frame" : "{{0, 0}, {310, 362}}",
+    "class" : "View",
+    "attributes" : {
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "enabled" : true,
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "name" : "",
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "flex" : ""
+    },
+    "selected" : false
+  }
 ]

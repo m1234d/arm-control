@@ -9,6 +9,7 @@ class BluetoothManager (object):
     def __init__(self):
         self.peripheral = None
         self.ready = False
+        self.c = None
 
     def did_discover_peripheral(self, p):
         if p.name:
@@ -43,6 +44,7 @@ class BluetoothManager (object):
             print(c.uuid)
             if c.uuid == 'FFE1':
                 self.ready = True
+                self.c = c
                 
 
     def did_update_value(self, c, error):
@@ -55,17 +57,17 @@ cb.set_central_delegate(mngr)
 print('Scanning for peripherals...')
 cb.scan_for_peripherals()
 
-try:
-    while True: 
-        if mngr.ready:
-            self.peripheral.write_characteristic_value(c, 'test', False)
-            v = ui.load_view()
-        v.present('sheet')
-        pass
-except KeyboardInterrupt:
-    cb.reset()
+def write_values(data):
+    if mngr.ready:
+        print(data)
+        mngr.peripheral.write_characteristic_value(mngr.c, data + '\n', False)
+
+def shoulder_action(sender):
+    write_values("Shoulder:" + str(sender.value))
     
 
+while (not mngr.ready):
+	pass
 
 v = ui.load_view()
 v.present('sheet')
